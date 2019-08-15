@@ -1,5 +1,5 @@
 from config import authhub
-from factories import AuthHubFactory
+from .factories.AuthHubFactory import AuthHubFactory
 
 
 class AuthHub:
