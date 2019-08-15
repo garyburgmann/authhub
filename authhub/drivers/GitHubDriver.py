@@ -1,18 +1,21 @@
-from config import services
+""" The GitHub AuthHub Driver """
+from config import authub
 import requests
 import json
+try:
+    from config import authub as app_config
+    github_config = app_config.AUTH_PROVIDERS['github']
+except ImportError:
+    raise ImportError('Config not found for GitHub')
 
 class GitHubDriver(object):
-    ''' AuthHub GitHub driver '''
 
-    def __init__(self, request, processor):
-        self.request = request
-        self.processor = processor
+    def __init__(self):
         self.scopes = None
-        self._state = ''
+        self._config = github_config
 
     def redirect(self):
-        ''' Redirect to GitHub '''
+        """ Redirect to GitHub """
         if self.scopes:
             scopes = ' '.join(self.scopes)
         else:
