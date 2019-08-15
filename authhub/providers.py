@@ -3,7 +3,7 @@ from masonite.provider import ServiceProvider
 from authhub.commands.InstallCommand import InstallCommand
 
 
-class BillingProvider(ServiceProvider):
+class AuthProvider(ServiceProvider):
 
     wsgi = False
 
