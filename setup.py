@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="authhub",
-    version='0.0.3',
+    version='0.0.31',
     packages=[
         'authhub',
         'authhub.commands',

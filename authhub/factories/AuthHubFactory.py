@@ -13,3 +13,4 @@ class AuthHubFactory:
             return GoogleDriver()
         if driver_name == 'github':
             return GitHubDriver()
+        raise NotImplementedError('Factory not found')
