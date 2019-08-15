@@ -7,6 +7,8 @@ from masonite.response import Response
 
 try:
     from config import authub as app_config
+    print('app_config: ', app_config)
+    print('app_config.AUTH_PROVIDERS: ', app_config.AUTH_PROVIDERS)
     provider_config = app_config.AUTH_PROVIDERS['google']
 except ImportError:
     raise ImportError('Config not found for Google')
